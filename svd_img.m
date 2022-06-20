@@ -1,9 +1,12 @@
 function M = svd_img(A, r)
     % Approximate, via Singular Value Decomposition, an RGB matrix by another with lower rank.
     % A (n by m by 3 matrix) original RGB matrix
-    % r (integer) custom rank of the approximated matrix
+    % r (integer) custom rank of the approximated matrix - if 0, interpreted as the original rank
     % M (n by m by 3 matrix) approximated RGB matrix
     [R, G, B] = rgb(A);
+    if (r == 0)
+        r = rank(G);  % rank(R) == rank(G) == rank(B)
+    end
     R = approximate(R, r);
     G = approximate(G, r);
     B = approximate(B, r);
