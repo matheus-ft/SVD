@@ -25,8 +25,6 @@ function M = approximate(A, r)
 end
 
 function M = picture(R, G, B)
-    M(:, :, 1) = R;
-    M(:, :, 2) = G;
-    M(:, :, 3) = B;
+    M = cat(3, R, G, B);
 end
 
