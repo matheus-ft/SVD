@@ -1,26 +1,22 @@
 img_path = 'java.jpg';
 A = imread(img_path);
-R = A(:, :, 1);
+G = A(:, :, 2);
 
-r = rank(R)
-r0 = 1;
-r1 = int32(r / 5);
-r2 = int32(r / 4);
-r3 = int32(r / 3);
-r4 = int32(r / 2);
+r = rank(G);
+printf("The original photograph is given by a matrix with rank %d.\n", r);
 
-M0 = svd_img(A, r0);
-imwrite(M0, strcat("recovered_r", int2str(r0), ".png"));
+M0 = svd_img(A, 1);
+imwrite(M0, strcat("recovered_r1.png"));
 
-M1 = svd_img(A, r1);
-imwrite(M1, strcat("recovered_r", int2str(r1), ".png"));
+M1 = svd_img(A, 51);
+imwrite(M1, strcat("recovered_r51.png"));
 
-M2 = svd_img(A, r2);
-imwrite(M2, strcat("recovered_r", int2str(r2), ".png"));
+M2 = svd_img(A, 101);
+imwrite(M2, strcat("recovered_r101.png"));
 
-M3 = svd_img(A, r3);
-imwrite(M3, strcat("recovered_r", int2str(r3), ".png"));
+M3 = svd_img(A, 151);
+imwrite(M3, strcat("recovered_r151.png"));
 
-M4 = svd_img(A, r4);
-imwrite(M4, strcat("recovered_r", int2str(r), ".png"));
+M4 = svd_img(A, 201);
+imwrite(M4, strcat("recovered_r201.png"));
 
