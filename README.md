@@ -16,11 +16,13 @@ Não, não a linguagem de programação Java, mas a buldogue mais fofa que você
 
 - Com [posto 1](https://github.com/matheus-ft/MS512-P2/blob/master/photos/recovered_r1.png) não é possível identificar nada.
 
-- Com [posto 51](https://github.com/matheus-ft/MS512-P2/blob/master/photos/recovered_r51.png), porém, já é possível identificá-la.
+- Com posto [21](https://github.com/matheus-ft/MS512-P2/blob/master/photos/recovered_r21.png) e [51](https://github.com/matheus-ft/MS512-P2/blob/master/photos/recovered_r51.png), porém, já é possível identificá-la, ainda que muito _pixelada_.
 
 - As imagens de posto [101](https://github.com/matheus-ft/MS512-P2/blob/master/photos/recovered_r101.png) e [151](https://github.com/matheus-ft/MS512-P2/blob/master/photos/recovered_r151.png) apresentam melhorias nos detalhes da fotografia, ficando mais nítidas que a anterior.
 
 - Com [posto 201](https://github.com/matheus-ft/MS512-P2/blob/master/photos/recovered_r201.png) é possível considerar que a imagem está recuperada.
 
 O número 201 foi obtido via *trial and error* e não carrega um resultado teórico para sua escolha - porém poderíamos avaliar a contribuição de cada valor singular para a formação da imagem (leitura externa indica que $\sigma_i^2$ representa a variância explicada pelos vetores singulares $u_i$ e $v_i$; quanto maior a variância, maior a contribuição e menos valores singulares subsequentes são necessários para recuperar a imagem) e então procurar um valor ótimo de `r`, se existir.
+
+Para obter os mesmos resultados, basta rodar, da raiz do projeto e dentro do octave CLI, `main`.
 
